@@ -2,12 +2,20 @@ body {
     display: flex;
     flex-direction: column;
     align-items: center;
+    background-color: #FDCEB9;
+}
+
+.btn {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
 }
 
 .container {
     margin: 15px;
-    width: 500px;
-    height: 500px;
+    width: 600px;
+    height: 600px;
+    background-color: white;
 }
 
 .row {
@@ -26,6 +34,4 @@ body {
 .cell {
     border: 1px solid black;
     box-sizing: border-box;
-    height: 30px;
-    width: 30px;
 }
