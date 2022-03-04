@@ -31,8 +31,6 @@ function grid(size) {
     });
 }
 
-grid(16)
-
 function reset() {
     const cells = document.querySelectorAll('.cell');
     cells.forEach((cell) => {
@@ -49,6 +47,8 @@ function reset() {
         gridSize = parseInt(prompt("Set the number of squares per side up to 100."));
     }
 }
+
+grid(16)
 
 const btn = document.querySelector("#btn");
 btn.addEventListener('click', reset);
