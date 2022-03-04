@@ -3,6 +3,7 @@ body {
     flex-direction: column;
     align-items: center;
     background-color: #FDCEB9;
+    font-family: "Comic Sans MS", "serif";
 }
 
 .btn {
