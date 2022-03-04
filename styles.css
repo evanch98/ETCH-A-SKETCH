@@ -1,3 +1,31 @@
-.container {
+body {
     display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.container {
+    margin: 15px;
+    width: 500px;
+    height: 500px;
+}
+
+.row {
+    flex: 0 0 20%;
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+}
+
+.column {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.cell {
+    border: 1px solid black;
+    box-sizing: border-box;
+    height: 30px;
+    width: 30px;
 }
