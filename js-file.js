@@ -1,5 +1,6 @@
 const container = document.querySelector(".container");
 
+// Computes random r, g, and b values and returns in a CSS style text.
 function randomRGB() {
     let r = parseInt(Math.random() * 256);
     let g = parseInt(Math.random() * 256);
@@ -7,10 +8,14 @@ function randomRGB() {
     return `rgb(${r}, ${g}, ${b})`;
 }
 
+// Simple function to return the black rgb values in a CSS style text.
 function black() {
     return `rgb(${0}, ${0}, ${0})`;
 }
 
+
+// This function will take a function that returns rgb values in a CSS style text as an argument.
+// Then it will change the color of the div when the mouse hover over it according to the color parameter.
 function hover(color) {
     const cells = document.querySelectorAll('.cell');
 
@@ -21,6 +26,8 @@ function hover(color) {
     });
 }
 
+// This function creates a sizexsize grid. The first parameter size will take an integer value to construct a grid using 'div' elements.
+// The second parameter color will take a function that returns rgb values in a CSS style text to pass it to the hover(color) function.
 function grid(size, color) {
     for (let i = 0; i < size; i++) {
         let row = document.createElement("div");
@@ -28,10 +35,10 @@ function grid(size, color) {
         for (let j = 0; j < size; j++) {
             let column = document.createElement('div');
             column.classList.add('column');
-            let cell = document.createElement('div');
+            let cell = document.createElement('div'); // cell is to be embedded within column 'divs'.
             cell.classList.add('cell');
-            cell.style.width = `${600 / size}px`;
-            cell.style.height = `${600 / size}px`;
+            cell.style.width = `${600 / size}px`; // to make the width depending on the number of grid.
+            cell.style.height = `${600 / size}px`; // to make the height depending on the number of grid.
             column.appendChild(cell);
             row.appendChild(column);
         }
@@ -41,6 +48,7 @@ function grid(size, color) {
     hover(color);
 }
 
+// This function is to reset grid into white color and create new grid again by asking the user to give the dimensions.
 function reset(color) {
 
     gridSize = parseInt(prompt("Set the number of squares per side up to 100."));
